@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "copilot-usage"
+version = "0.1.0"
+description = "Terminal app to track and visualize GitHub Copilot premium request usage and spend"
+requires-python = ">=3.10"
+dependencies = [
+    "rich>=13.0",
+    "click>=8.0",
+    "pyyaml>=6.0",
+    "pyreadline3>=3.4; sys_platform == 'win32'",
+]
+
+[project.scripts]
+copilot-usage = "copilot_usage.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

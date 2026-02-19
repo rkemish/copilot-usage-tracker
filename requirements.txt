@@ -1,0 +1,8 @@
+click==8.3.1
+colorama==0.4.6
+markdown-it-py==4.0.0
+mdurl==0.1.2
+Pygments==2.19.2
+pyreadline3==3.5.4
+PyYAML==6.0.3
+rich==14.3.3

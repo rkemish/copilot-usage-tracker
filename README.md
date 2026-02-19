@@ -51,19 +51,9 @@ Or download the standalone `copilot-usage.exe` from [Releases](https://github.co
 Run `copilot-usage` with no arguments to enter interactive mode.
 Type `/` to open the command picker — use ↑↓ arrows to navigate, Enter to select, or keep typing to filter:
 
-```
-> /
-  ❯ /dashboard     Show the full usage dashboard
-    /status        Quick one-line usage summary
-    /tokens        Show token usage and response latency
-    /sessions      Show session lifecycle overview
-    /scan          Re-parse Copilot CLI logs
-    /setup         Re-run plan & settings configuration
-    /plan          Show current plan details
-    /models        Show model multiplier table
-    /help          List available commands
-    /quit          Exit the app
-```
+<p align="center">
+  <img src="screenshots/commands.svg" width="700" alt="Command picker">
+</p>
 
 ### Commands
 
@@ -96,24 +86,43 @@ copilot-usage status       # One-line summary
 
 The `/dashboard` command renders six panels:
 
-```
-╭────────────────────── 📊 Copilot Usage Summary ──────────────────────╮
-│ Plan: Enterprise ($39/mo)                                            │
-│ Premium Requests: 4413 / 1000 (100%)                                 │
-│   ████████████████████████████████████████                            │
-│ Overage: 3413 requests × $0.04 = $136.53                             │
-│ Estimated Spend: $175.53                                             │
-╰──────────────────────────────────────────────────────────────────────╯
-```
+### Usage Summary
+<p align="center">
+  <img src="screenshots/summary.svg" width="700" alt="Usage summary">
+</p>
 
-| Panel | What it shows |
-|-------|---------------|
-| **📊 Usage Summary** | Plan, premium reqs used/remaining, progress bar, overage, estimated spend |
-| **📋 Usage by Model** | Per-model call count, premium reqs consumed, % of total, overage cost |
-| **🔤 Token Usage** | Prompt/completion/cached tokens, cache hit rate, per-model breakdown |
-| **⚡ Response Latency** | Per-model avg/min/max/P50/P95 response times |
-| **🔄 Session Overview** | Total sessions, avg duration, turns/session, recent sessions table |
-| **📅 Weekly + Daily** | Weekly usage bars, last 14 days with daily breakdown |
+### Usage by Model
+<p align="center">
+  <img src="screenshots/models.svg" width="700" alt="Model breakdown">
+</p>
+
+### Token Analytics
+<p align="center">
+  <img src="screenshots/tokens.svg" width="700" alt="Token usage">
+</p>
+
+### Response Latency
+<p align="center">
+  <img src="screenshots/latency.svg" width="700" alt="Latency stats">
+</p>
+
+### Session Overview
+<p align="center">
+  <img src="screenshots/sessions.svg" width="700" alt="Session tracking">
+</p>
+
+### Weekly & Daily Breakdown
+<p align="center">
+  <img src="screenshots/weekly.svg" width="700" alt="Weekly breakdown">
+</p>
+<p align="center">
+  <img src="screenshots/daily.svg" width="700" alt="Daily usage">
+</p>
+
+### Quick Status
+<p align="center">
+  <img src="screenshots/status.svg" width="700" alt="Status line">
+</p>
 
 ---
 

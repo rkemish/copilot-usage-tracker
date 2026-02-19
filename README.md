@@ -1,5 +1,7 @@
 # Copilot Usage Tracker
 
+[![Build Windows Executables](https://github.com/rkemish/copilot-usage-tracker/actions/workflows/build-release.yml/badge.svg)](https://github.com/rkemish/copilot-usage-tracker/actions/workflows/build-release.yml)
+
 ```
    ___            _ _       _     _   _                      
   / __\___  _ __ (_) | ___ | |_  | | | |___  __ _  __ _  ___ 

@@ -33,7 +33,7 @@ A terminal app that tracks your GitHub Copilot premium request usage and estimat
 
 ```bash
 # Install from source (Python 3.10+)
-git clone https://github.com/rafaelkemish/copilot-usage.git
+git clone https://github.com/rkemish/copilot-usage-tracker.git
 cd copilot-usage
 python -m venv .venv && .venv\Scripts\activate
 pip install -e .
@@ -42,7 +42,7 @@ pip install -e .
 copilot-usage
 ```
 
-Or download the standalone `copilot-usage.exe` from [Releases](https://github.com/rafaelkemish/copilot-usage/releases).
+Or download the standalone `copilot-usage.exe` from [Releases](https://github.com/rkemish/copilot-usage-tracker/releases).
 
 ---
 
@@ -160,8 +160,8 @@ Each model call consumes a different number of premium requests:
 | Raptor mini | 0× (free) | | GPT-5.x Codex | 1× |
 | Grok Code Fast 1 | 0.25× | | GPT-5.1 Codex Max | 1× |
 | Gemini 3 Flash | 0.33× | | Claude Opus 4.5 / 4.6 | 3× |
-| GPT-5.1 Codex Mini | 0.33× | | Claude Opus 4.6 (fast) | 30× |
-| Claude Haiku 4.5 | 0.33× | | | |
+| GPT-5.1 Codex Mini | 0.33× | | Claude Opus 4.6 (1M) | 3× |
+| Claude Haiku 4.5 | 0.33× | | Claude Opus 4.6 (fast) | 30× |
 
 Override any multiplier during `/setup`. View active values with `/models`.
 

@@ -155,15 +155,13 @@ Each model call consumes a different number of premium requests:
 
 | Model | Multiplier | | Model | Multiplier |
 |-------|------------|--|-------|------------|
-| GPT-4o / 4.1 | 0× (free) | | Claude Sonnet 3.5–4.6 | 1× |
-| GPT-5-mini | 0× (free) | | Gemini Pro 2.0/2.5 | 1× |
-| Gemini 2.0 Flash | 0.25× | | GPT-5.x Codex | 1× |
-| o3-mini / o4-mini | 0.33× | | Claude 3.7 Thinking | 1.25× |
-| Claude Haiku 4.5 | 0.33× | | Spark | 4× |
-| | | | GPT-5.1 Codex Max | 5× |
-| | | | Claude Opus 4.6 | 6× |
-| | | | Claude Opus 4/4.5 | 10× |
-| | | | GPT-4.5 | 50× |
+| GPT-4o / 4.1 | 0× (free) | | Claude Sonnet 4–4.6 | 1× |
+| GPT-5 mini | 0× (free) | | Gemini 2.5 / 3 / 3.1 Pro | 1× |
+| Raptor mini | 0× (free) | | GPT-5.x Codex | 1× |
+| Grok Code Fast 1 | 0.25× | | GPT-5.1 Codex Max | 1× |
+| Gemini 3 Flash | 0.33× | | Claude Opus 4.5 / 4.6 | 3× |
+| GPT-5.1 Codex Mini | 0.33× | | Claude Opus 4.6 (fast) | 30× |
+| Claude Haiku 4.5 | 0.33× | | | |
 
 Override any multiplier during `/setup`. View active values with `/models`.
 

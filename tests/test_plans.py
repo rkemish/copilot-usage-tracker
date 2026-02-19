@@ -62,7 +62,7 @@ class TestMultipliers:
     def test_known_multipliers(self):
         mm = get_multiplier_map()
         assert mm["gpt-5-mini"].multiplier == 0
-        assert mm["claude-opus-4.6"].multiplier == 6
+        assert mm["claude-opus-4.6"].multiplier == 3
 
     def test_display_name_default(self):
         m = ModelMultiplier(model_family="test-model", multiplier=1.0)

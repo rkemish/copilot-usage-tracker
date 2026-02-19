@@ -69,12 +69,12 @@ class TestGetMultipliers:
     def test_default_multipliers(self):
         m = get_multipliers_from_config({})
         assert "claude-opus-4.6" in m
-        assert m["claude-opus-4.6"] == 6
+        assert m["claude-opus-4.6"] == 3
 
     def test_overridden_multipliers(self):
-        config = {"multiplier_overrides": {"claude-opus-4.6": 3}}
+        config = {"multiplier_overrides": {"claude-opus-4.6": 10}}
         m = get_multipliers_from_config(config)
-        assert m["claude-opus-4.6"] == 3
+        assert m["claude-opus-4.6"] == 10
 
     def test_override_preserves_others(self):
         config = {"multiplier_overrides": {"claude-opus-4.6": 3}}

@@ -8,3 +8,4 @@ build/
 *.spec
 .pytest_cache/
 *.db
+.coverage

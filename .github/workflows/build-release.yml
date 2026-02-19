@@ -1,0 +1,51 @@
+name: Build Windows Executables
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to attach binaries to"
+        required: true
+        default: "v1.0.0"
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - runner: windows-latest
+            arch: x64
+            artifact: copilot-usage-windows-x64.exe
+          - runner: windows-11-arm
+            arch: arm64
+            artifact: copilot-usage-windows-arm64.exe
+    runs-on: ${{ matrix.runner }}
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -e .
+          pip install pyinstaller
+
+      - name: Build executable
+        shell: bash
+        env:
+          ARTIFACT_NAME: ${{ matrix.artifact }}
+        run: |
+          pyinstaller --onefile --name "$ARTIFACT_NAME" --collect-all rich --hidden-import pyreadline3 src/copilot_usage/__main__.py
+
+      - name: Upload to release
+        env:
+          RELEASE_TAG: ${{ github.event.inputs.tag }}
+          ARTIFACT_NAME: ${{ matrix.artifact }}
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.RELEASE_TAG }}
+          files: dist/${{ env.ARTIFACT_NAME }}

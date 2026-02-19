@@ -74,18 +74,6 @@ DEFAULT_MULTIPLIERS: list[ModelMultiplier] = [
     ModelMultiplier("claude-opus-4.6-1m", 3, "Claude Opus 4.6 (1M)"),
     # Very high
     ModelMultiplier("claude-opus-4.6-fast", 30, "Claude Opus 4.6 (fast)"),
-    # ── Deprecated models (kept for parsing older logs) ──────────────────
-    ModelMultiplier("gemini-2.0-flash", 0.25, "Gemini 2.0 Flash"),
-    ModelMultiplier("o3-mini", 0.33, "o3-mini"),
-    ModelMultiplier("o4-mini", 0.33, "o4-mini"),
-    ModelMultiplier("claude-3.5-sonnet", 1, "Claude 3.5 Sonnet"),
-    ModelMultiplier("claude-3.7-sonnet", 1, "Claude 3.7 Sonnet"),
-    ModelMultiplier("claude-3.7-sonnet-thinking", 1.25, "Claude 3.7 Thinking"),
-    ModelMultiplier("gemini-2.0-pro", 1, "Gemini 2.0 Pro"),
-    ModelMultiplier("gemini-3-pro-preview", 1, "Gemini 3 Pro (Preview)"),
-    ModelMultiplier("claude-opus-4", 10, "Claude Opus 4"),
-    ModelMultiplier("spark", 4, "Spark"),
-    ModelMultiplier("gpt-4.5", 50, "GPT-4.5"),
 ]
 
 
